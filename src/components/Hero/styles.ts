@@ -48,6 +48,25 @@ export const CardHero = styled('div', {
     fontSize: '1rem',
     lineHeight: 2,
     marginTop: '1.2rem',
+  }
+})
+
+
+export const FormHero = styled('form', {
+  input: {
+    minHeight: '60px',
+    color: 'black',
+    backgroundColor: '#EFF3F7',
+    borderRadius: '6px',
+    flexGrow: 1,
+    padding: '0 24px',
+    height: 'auto',
+    width: '100%',
+    border: 0,
+  },
+
+  'input + input': {
+    marginTop: '1rem'
   },
 
   button: {
