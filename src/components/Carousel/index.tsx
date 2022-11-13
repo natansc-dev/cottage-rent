@@ -1,4 +1,4 @@
-import { ContainerCarousel, SectionCarousel, GridCarousel, DescritionCarousel, FeaturesCarousel, SwiperContent, ImageContent } from "./styles";
+import { ContainerCarousel, SectionCarousel, GridCarousel, DescritionCarousel, FeaturesCarousel, GridRightContent, GridLeftContent, ImageContent } from "./styles";
 
 import { Toilet } from 'phosphor-react'
 
@@ -26,16 +26,16 @@ SwiperCore.use([Autoplay, Pagination, EffectFade]);
 export function Carousel() {
   return (
     <SectionCarousel>
-      <ContainerCarousel>
-        <GridCarousel media={{ '@sm': 'md' }}>
-          <div>
-            <DescritionCarousel media={{ '@sm': 'md' }}>
-              <h3>Um bom lugar para onde você pode construir sua história</h3>
+      <ContainerCarousel media={{ '@lg': 'lg' }}>
+        <GridCarousel media={{ '@lg': 'lg' }}>
+          <GridLeftContent>
+            <DescritionCarousel>
+              <h2>Um bom lugar para onde você pode construir sua história</h2>
 
               <p>Co-working offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities.</p>
             </DescritionCarousel>
 
-            <FeaturesCarousel media={{ '@sm': 'md' }}>
+            <FeaturesCarousel media={{ '@md': 'md' }}>
               <div>
                 <Toilet size={48} />
                 <h3>4 Banheiros</h3>
@@ -54,9 +54,9 @@ export function Carousel() {
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </FeaturesCarousel>
-          </div>
+          </GridLeftContent>
 
-          <SwiperContent media={{ '@sm': 'md' }}>
+          <GridRightContent>
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
@@ -67,7 +67,7 @@ export function Carousel() {
               pagination={{
                 clickable: true,
               }}
-              navigation={true}
+              navigation={false}
               modules={[Autoplay, Pagination, Navigation]}
               className="mySwiper"
             >
@@ -77,9 +77,11 @@ export function Carousel() {
                     src={piscinaImg01}
                     alt=""
                   />
+
                   <figcaption>
                     <div>
                       <h4>Sala Conjugada</h4>
+
                       <p>Apartamento</p>
                     </div>
                   </figcaption>
@@ -251,7 +253,7 @@ export function Carousel() {
                 </ImageContent>
               </SwiperSlide>
             </Swiper>
-          </SwiperContent>
+          </GridRightContent>
         </GridCarousel>
       </ContainerCarousel>
     </SectionCarousel>

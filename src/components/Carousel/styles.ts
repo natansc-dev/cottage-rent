@@ -7,63 +7,75 @@ export const SectionCarousel = styled('section', {
 })
 
 export const ContainerCarousel = styled('div', {
+  minWidth: 0,
   width: '100%',
-  maxWidth: '1120px',
+  maxWidth: '100%',
+  paddingLeft: '1.8rem',
+  paddingRight: '1.8rem',
   margin: '0 auto',
-})
-
-export const GridCarousel = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(1, 1fr)',
-  gap: '2rem',
 
   variants: {
     media: {
-      md: {
+      lg: {
+        maxWidth: '970px',
+      }
+    },
+  },
+})
+
+export const GridCarousel = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  gridTemplateColumns: 'unset',
+
+  variants: {
+    media: {
+      lg: {
+        gap: '2rem',
+        display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
       }
     },
   },
 })
 
+export const GridLeftContent = styled('div', {
+})
+
 export const DescritionCarousel = styled('div', {
-  marginBottom: '4.8rem',
-  padding: '0 1rem',
+  minWidth: 0,
+  maxWidth: '490px',
+  margin: '0 auto 4rem',
+  textAlign: 'center',
 
-  variants: {
-    media: {
-      md: {
-        padding: 0,
-      }
-    },
-  },
-
-
-  h3: {
-    fontSize: '2.2rem',
-    fontWeight: '500',
-    lineHeight: 1.6
+  h2: {
+    fontSize: '1.4rem',
+    fontWeight: 500,
+    lineHeight: 1.6,
+    letterSpacing: 0.5,
   },
 
   p: {
+    color: "#343D48",
     fontSize: '1rem',
-    marginTop: '1rem',
-    color: '#343D58',
-    lineHeight: 2.08,
+    lineHeight: 2.06,
+    mb: '1rem',
   }
 })
 
 export const FeaturesCarousel = styled('div', {
+  margin: 0,
+  minWidth: 0,
+  gap: '2.6rem 1.4rem',
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
-  padding: '0 1rem',
-  gap: '2rem',
 
   variants: {
     media: {
       md: {
         gridTemplateColumns: 'repeat(3, 1fr)',
-        padding: 0,
+        justifyContent: 'center',
       }
     },
   },
@@ -85,21 +97,12 @@ export const FeaturesCarousel = styled('div', {
   }
 })
 
-export const SwiperContent = styled('div', {
-  maxWidth: '18rem',
-  padding: '0 1rem',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-
-  variants: {
-    media: {
-      md: {
-        maxWidth: '40rem',
-        padding: 0,
-      }
-    },
-  },
+export const GridRightContent = styled('div', {
+  margin: 0,
+  minWidth: 0,
+  position: 'relative',
+  marginTop: '48px',
+  maxWidth: '100%',
 
   '.swiper-pagination-bullets': {
     bottom: 20,
