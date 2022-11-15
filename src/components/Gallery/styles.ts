@@ -11,6 +11,14 @@ export const ContainerGallery = styled('div', {
   paddingLeft: '1.8rem',
   paddingRight: '1.8rem',
   margin: '0 auto',
+
+  variants: {
+    media: {
+      lg: {
+        maxWidth: '970px',
+      }
+    }
+  }
 })
 
 export const HeadingGallery = styled('div', {
@@ -32,7 +40,7 @@ export const HeadingGallery = styled('div', {
     fontSize: '1rem',
     fontWeight: 700,
     lineHeight: 2.22,
-    mb: '1rem',
+    marginBottom: '1rem',
   }
 })
 
@@ -40,10 +48,19 @@ export const MasonryContentGallery = styled('div', {
   figure: {
     position: 'relative',
     padding: '0.4rem',
+    overflow: 'hidden',
+    borderRadius: '6px',
 
     img: {
       width: '100%',
-      height: 'auto'
+      height: 'auto',
+      transition: 'all 0.3s ease-in-out 0s',
+      borderRadius: '6px',
+
+      '&:hover': {
+        transform: 'scale(1.1)',
+
+      }
     },
 
     figcaption: {

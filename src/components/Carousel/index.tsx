@@ -29,7 +29,7 @@ export function Carousel() {
       <ContainerCarousel media={{ '@lg': 'lg' }}>
         <GridCarousel media={{ '@lg': 'lg' }}>
           <GridLeftContent>
-            <DescritionCarousel>
+            <DescritionCarousel media={{ '@lg': 'lg' }}>
               <h2>Um bom lugar para onde você pode construir sua história</h2>
 
               <p>Co-working offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities.</p>

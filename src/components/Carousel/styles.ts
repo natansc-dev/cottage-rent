@@ -60,8 +60,25 @@ export const DescritionCarousel = styled('div', {
     color: "#343D48",
     fontSize: '1rem',
     lineHeight: 2.06,
-    mb: '1rem',
-  }
+    marginBottom: '1rem',
+  },
+
+  variants: {
+    media: {
+      lg: {
+
+        h2: {
+          fontSize: '2rem',
+          textAlign: 'left'
+        },
+
+        p: {
+          marginTop: '2rem',
+          textAlign: 'left'
+        }
+      }
+    },
+  },
 })
 
 export const FeaturesCarousel = styled('div', {

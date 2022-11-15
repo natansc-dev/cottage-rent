@@ -1,4 +1,4 @@
-import { CardHero, ContainerHero, ContentHero, FormHero, SectionHero } from "./styles";
+import { CardHero, ContainerHero, ContentHero, FormGroup, FormHero, SectionHero } from "./styles";
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -6,13 +6,8 @@ import * as z from 'zod';
 const schema = z.object({
   name: z.string().min(1, { message: 'Required' }),
   phone: z.number().min(10),
-  rg: z.number().min(10),
-  cpf: z.number().min(10),
-
-  cep: z.number().min(10),
-  address: z.number().min(10),
-  city: z.number().min(10),
-  district: z.number().min(10),
+  start_at: z.number().min(10),
+  end_at: z.number().min(10),
 });
 
 export function Hero() {
@@ -38,17 +33,23 @@ export function Hero() {
             </p>
 
             <FormHero onSubmit={handleSubmit(d => console.log(d))}>
-              <input type="text" placeholder="Nome" {...register('name')} />
-              <input type="text" placeholder="Celular" {...register('phone')} />
-              <input type="text" placeholder="RG" {...register('rg')} />
-              <input type="text" placeholder="CPF" {...register('cpf')} />
+              <label htmlFor="full-name">Nome Completo</label>
+              <input id="full-name" type="text" placeholder="João Silva" {...register('name')} />
 
-              <input type="text" placeholder="CEP" {...register('cep')} />
+              <label htmlFor="phone">Celular</label>
+              <input id="phone" type="text" placeholder="+55 (00) 00000-000" {...register('phone')} />
 
-              {/* <input type="text" placeholder="Endereço" {...register('address')} />
-              <input type="text" placeholder="Cidade" {...register('city')} />
-              <input type="text" placeholder="Bairro" {...register('district')} />
-               */}
+              <FormGroup media={{ '@lg': 'lg' }}>
+                <div>
+                  <label htmlFor="phone">Data inicial</label>
+                  <input type="date" {...register('start_at')} />
+                </div>
+
+                <div>
+                  <label htmlFor="phone">Data final</label>
+                  <input type="date" {...register('end_at')} />
+                </div>
+              </FormGroup>
 
               <button type="submit">
                 Enviar mensagem

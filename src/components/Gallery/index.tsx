@@ -21,7 +21,7 @@ import { ContainerGallery, HeadingGallery, MasonryContentGallery, SectionGallery
 export function Gallery() {
   return (
     <SectionGallery>
-      <ContainerGallery>
+      <ContainerGallery media={{ '@lg': 'lg' }}>
         <HeadingGallery>
           <p>Chácara</p>
           <h2>Deixe te apresenta o seu condomínio</h2>
@@ -110,8 +110,6 @@ export function Gallery() {
             </MasonryContentGallery>
           </Masonry>
         </ResponsiveMasonry>
-
-
       </ContainerGallery>
     </SectionGallery>
   )

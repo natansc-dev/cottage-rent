@@ -19,7 +19,7 @@ export const SectionHero = styled('section', {
 
 export const ContainerHero = styled('div', {
   maxWidth: '1120px',
-  padding: '0 2rem',
+  padding: '0 1rem',
   margin: '0 auto',
   position: 'relative',
   zIndex: 2,
@@ -32,11 +32,13 @@ export const ContentHero = styled('div', {
 })
 
 export const CardHero = styled('div', {
+  width: '100%',
   maxWidth: '528px',
   padding: '2rem',
   backgroundColor: 'rgba(255, 255, 255, 0.90)',
   borderRadius: '6px',
   boxShadow: '0px 10px 16px rgba(255, 255, 255, 0.30)',
+  margin: '2rem 0',
 
   h1: {
     fontSize: '2rem',
@@ -47,12 +49,21 @@ export const CardHero = styled('div', {
   p: {
     fontSize: '1rem',
     lineHeight: 2,
-    marginTop: '1.2rem',
-  }
+    margin: '1.2rem 0',
+  },
 })
 
-
 export const FormHero = styled('form', {
+  label: {
+    margin: 0,
+    minWidth: 0,
+    width: '100%',
+    display: 'flex',
+    fontSize: '0.8rem',
+    fontWeight: 700,
+    marginBottom: '0.5rem',
+  },
+
   input: {
     minHeight: '60px',
     color: 'black',
@@ -63,10 +74,11 @@ export const FormHero = styled('form', {
     height: 'auto',
     width: '100%',
     border: 0,
+    marginBottom: '0.8rem',
   },
 
   'input + input': {
-    marginTop: '1rem'
+    marginTop: '1rem',
   },
 
   button: {
@@ -80,5 +92,19 @@ export const FormHero = styled('form', {
     color: 'white',
     fontWeight: '700',
     fontSize: '1.2rem',
+  }
+})
+
+export const FormGroup = styled('div', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(1, 1fr)',
+
+  variants: {
+    media: {
+      lg: {
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '2rem',
+      }
+    }
   }
 })
