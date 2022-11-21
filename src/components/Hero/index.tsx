@@ -1,4 +1,4 @@
-import { CardHero, ContainerHero, ContentHero, FormGroup, FormHero, SectionHero } from "./styles";
+import { CardHero, ContainerHero, ContentHero, FormGroup, FormHero, ImageContainer, SectionHero } from "./styles";
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -32,8 +32,9 @@ export function Hero() {
       <ContainerHero>
         <ContentHero>
           <CardHero>
-            <Image src={logoImg} alt="Logo Chácara Kairós, no final da palavra Kairós tem um relógio minimalista em número romanos." />
-
+            <ImageContainer>
+              <Image src={logoImg} alt="Logo Chácara Kairós, no final da palavra Kairós tem um relógio minimalista em número romanos." width={320} />
+            </ImageContainer>
             <p>
               Preencha o formúlario abaixo!
             </p>

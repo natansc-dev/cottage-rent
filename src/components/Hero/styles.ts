@@ -53,6 +53,13 @@ export const CardHero = styled('div', {
   },
 })
 
+export const ImageContainer = styled('div', {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+})
+
 export const FormHero = styled('form', {
   label: {
     margin: 0,
