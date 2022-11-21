@@ -13,7 +13,8 @@ export const {
   theme: {
     colors: {
       white: '#FFFFFF',
-      primary: '#E13B2F',
+      primary: '#3790C7',
+      secundary: '#225D81',
     },
   },
   media: {

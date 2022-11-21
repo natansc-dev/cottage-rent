@@ -1,6 +1,6 @@
 import { ContainerCarousel, SectionCarousel, GridCarousel, DescritionCarousel, FeaturesCarousel, GridRightContent, GridLeftContent, ImageContent } from "./styles";
 
-import { Toilet } from 'phosphor-react'
+import { Toilet, WifiHigh, Drop } from 'phosphor-react'
 
 import Image from "next/image";
 
@@ -30,21 +30,21 @@ export function Carousel() {
         <GridCarousel media={{ '@lg': 'lg' }}>
           <GridLeftContent>
             <DescritionCarousel media={{ '@lg': 'lg' }}>
-              <h2>Um bom lugar para onde você pode construir sua história</h2>
+              <h2>Um bom lugar para onde você pode construir sua memórias</h2>
 
-              <p>Co-working offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities.</p>
+              <p>Excelente chácara para diversas ocasiões, venha aproveitar essa chácara aconchegante, seja para o seu lazer ou para sua festa.</p>
             </DescritionCarousel>
 
             <FeaturesCarousel media={{ '@md': 'md' }}>
               <div>
-                <Toilet size={48} />
-                <h3>4 Banheiros</h3>
+                <WifiHigh size={48} />
+                <h3>Wifi</h3>
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
 
               <div>
-                <Toilet size={48} />
-                <h3>4 Banheiros</h3>
+                <Drop size={48} />
+                <h3>Piscina</h3>
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
 

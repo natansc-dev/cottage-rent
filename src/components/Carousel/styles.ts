@@ -98,7 +98,7 @@ export const FeaturesCarousel = styled('div', {
   },
 
   svg: {
-    color: '#E13B2F',
+    color: '$secundary',
   },
 
   h3: {
