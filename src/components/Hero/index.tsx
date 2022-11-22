@@ -27,24 +27,36 @@ export function Hero() {
 
   async function handlePreRegister(data: PreRegisterFormInputs) {
     const { name, phone, start_at, end_at } = data
+    try {
+      const response = await api.post('interests', {
+        name,
+        phone,
+        start_at,
+        end_at
+      })
 
-    const response = await api.post('interests', {
-      name,
-      phone,
-      start_at,
-      end_at
-    })
-
-    toast.success('Sua solitação foi enviada com sucesso!', {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+      toast.success('Sua solitação foi enviada com sucesso!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } catch (error) {
+      toast.error('Ops...Sua solitação deu erro! Tente novamente.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   }
 
   return (
