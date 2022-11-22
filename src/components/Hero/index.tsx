@@ -1,9 +1,11 @@
 import { CardHero, ContainerHero, ContentHero, FormGroup, FormHero, ImageContainer, SectionHero } from "./styles";
+import { ToastContainer, toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import logoImg from '../../assets/logo.png'
 import Image from "next/image";
+import { api } from "../../lib/axios";
 
 const formSchema = z.object({
   name: z.string().min(3),
@@ -19,24 +21,55 @@ export function Hero() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm({
+  } = useForm<PreRegisterFormInputs>({
     resolver: zodResolver(formSchema),
   });
 
-  function handlePreRegister(data: any) {
-    console.log(data)
+  async function handlePreRegister(data: PreRegisterFormInputs) {
+    const { name, phone, start_at, end_at } = data
+
+    const response = await api.post('interests', {
+      name,
+      phone,
+      start_at,
+      end_at
+    })
+
+    toast.success('Sua solitação foi enviada com sucesso!', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   }
 
   return (
     <SectionHero>
       <ContainerHero>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+
         <ContentHero>
           <CardHero>
             <ImageContainer>
               <Image src={logoImg} alt="Logo Chácara Kairós, no final da palavra Kairós tem um relógio minimalista em número romanos." width={320} />
             </ImageContainer>
             <p>
-              Preencha o formúlario abaixo!
+              Envie um solitação de interesse, preencher o formulário abaixo:
             </p>
 
             <FormHero onSubmit={handleSubmit(handlePreRegister)}>

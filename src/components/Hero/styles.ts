@@ -99,6 +99,15 @@ export const FormHero = styled('form', {
     color: 'white',
     fontWeight: '700',
     fontSize: '1.2rem',
+
+    '&:disabled': {
+      opacity: 0.6,
+      cursor: 'not-allowed'
+    },
+
+    '&:not(:disabled):hover': {
+      backgroundColor: '$secundary',
+    }
   }
 })
 
