@@ -1,9 +1,11 @@
 import "swiper/css/bundle";
 
+import Head from "next/head";
+
 import { Hero } from '../components/Hero'
 import { Carousel } from '../components/Carousel'
 import { Gallery } from '../components/Gallery';
-import Head from "next/head";
+import { Package } from "../components/Package";
 import { Footer } from "../components/Footer";
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
         <Hero />
         <Carousel />
         <Gallery />
+        <Package />
         <Footer />
       </main>
     </>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import SwiperCore, { Autoplay, Pagination, EffectFade, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Progressbar } from "../Processbar";
+// import { Progressbar } from "../Processbar";
 
 import piscinaImg01 from '../../assets/piscina01.png'
 import piscinaImg02 from '../../assets/piscina02.png'
