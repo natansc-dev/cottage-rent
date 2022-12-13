@@ -1,15 +1,15 @@
 import piscinaImg01 from '../../assets/piscina01.png'
-import piscinaImg02 from '../../assets/piscina02.png'
-import piscinaImg03 from '../../assets/piscina03.png'
+// import piscinaImg02 from '../../assets/piscina02.png'
+// import piscinaImg03 from '../../assets/piscina03.png'
 import churrasqueiraImg01 from '../../assets/churrasqueira01.png'
-import churrasqueiraImg02 from '../../assets/churrasqueira02.png'
+// import churrasqueiraImg02 from '../../assets/churrasqueira02.png'
 import salaoImg01 from '../../assets/salao01.png'
-import salaoImg02 from '../../assets/salao02.png'
+// import salaoImg02 from '../../assets/salao02.png'
 import quartoImg from '../../assets/quarto.png'
 import banheiroImg01 from '../../assets/banheiro01.png'
-import banheiroImg02 from '../../assets/banheiro02.png'
+// import banheiroImg02 from '../../assets/banheiro02.png'
 import visaoImg01 from '../../assets/visao01.png'
-import visaoImg02 from '../../assets/visao02.png'
+// import visaoImg02 from '../../assets/visao02.png'
 import Image from 'next/image'
 
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
@@ -52,7 +52,7 @@ export function Gallery() {
                 />
 
                 <figcaption>
-                  Piscina
+                  Churrasqueira
                 </figcaption>
               </figure>
             </MasonryContentGallery>
@@ -65,7 +65,7 @@ export function Gallery() {
                 />
 
                 <figcaption>
-                  Piscina
+                  Salão
                 </figcaption>
               </figure>
             </MasonryContentGallery>
@@ -78,7 +78,7 @@ export function Gallery() {
                 />
 
                 <figcaption>
-                  Piscina
+                  Quarto
                 </figcaption>
               </figure>
             </MasonryContentGallery>
@@ -91,7 +91,7 @@ export function Gallery() {
                 />
 
                 <figcaption>
-                  Piscina
+                  Banheiro
                 </figcaption>
               </figure>
             </MasonryContentGallery>
@@ -104,7 +104,7 @@ export function Gallery() {
                 />
 
                 <figcaption>
-                  Piscina
+                  Campo
                 </figcaption>
               </figure>
             </MasonryContentGallery>
