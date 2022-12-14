@@ -6,6 +6,7 @@ import * as z from 'zod';
 import logoImg from '../../assets/logo.png'
 import Image from "next/image";
 import { api } from "../../lib/axios";
+import InputMask from "react-input-mask";
 
 const formSchema = z.object({
   name: z.string().min(3),
@@ -90,30 +91,37 @@ export function Hero() {
                 id="full-name"
                 type="text"
                 placeholder="João Silva"
+                required
                 {...register('name')}
               />
 
               <label htmlFor="phone">Celular</label>
-              <input
-                id="phone"
+              <InputMask
                 type="text"
-                placeholder="+55 (00) 00000-000"
+                mask="+5\5 (99) 9 9999-9999"
+                maskChar=" "
+                placeholder="(00) 0 0000-000"
+                required
                 {...register('phone')}
               />
 
               <FormGroup media={{ '@lg': 'lg' }}>
                 <div>
-                  <label htmlFor="phone">Data inicial</label>
+                  <label htmlFor="start_at">Data inicial</label>
                   <input
+                    id="start_at"
                     type="date"
+                    required
                     {...register('start_at', { valueAsDate: true })}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone">Data final</label>
+                  <label htmlFor="end_at">Data final</label>
                   <input
+                    id="end_at"
                     type="date"
+                    required
                     {...register('end_at', { valueAsDate: true })}
                   />
                 </div>

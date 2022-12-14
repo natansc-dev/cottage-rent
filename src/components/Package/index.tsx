@@ -3,8 +3,9 @@ import SwiperCore, { Autoplay, Pagination, EffectFade, Navigation } from 'swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { api } from '../../lib/axios';
 import { useEffect, useState } from 'react';
-import { format } from 'date-fns'
-import { ClockClockwise, ClockCounterClockwise } from 'phosphor-react';
+import { format, formatDistance } from 'date-fns'
+import { Clock, ClockClockwise, ClockCounterClockwise } from 'phosphor-react';
+import ptBR from 'date-fns/locale/pt-BR'
 
 
 SwiperCore.use([Autoplay, Pagination, EffectFade]);
@@ -54,8 +55,28 @@ export function Package() {
                   </CardHeader>
 
                   <CardBody>
-                    <time dateTime={format(new Date(i.start_at), 'yyyy-MM-dd')}><ClockClockwise size={18} /> {format(new Date(i.start_at), 'dd/MM/yyyy')}</time>
-                    <time dateTime={format(new Date(i.end_at), 'yyyy-MM-dd')}><ClockCounterClockwise size={18} /> {format(new Date(i.end_at), 'dd/MM/yyyy')}</time>
+                    <div>
+                      <span>Data de Entrada:</span>
+                      <time dateTime={format(new Date(i.start_at), 'yyyy-MM-dd')}>
+                        <ClockClockwise size={18} /> {format(new Date(i.start_at), 'dd/MM/yyyy')}
+                      </time>
+                    </div>
+
+                    <div>
+                      <span>Data de Saída:</span>
+                      <time dateTime={format(new Date(i.end_at), 'yyyy-MM-dd')}>
+                        <ClockCounterClockwise size={18} /> {format(new Date(i.end_at), 'dd/MM/yyyy')}
+                      </time>
+                    </div>
+
+                    <div>
+                      <span>Estadia:</span>
+                      <time>
+                        <Clock size={18} /> {formatDistance(new Date(i.start_at), new Date(i.end_at), {
+                          locale: ptBR,
+                        })}
+                      </time>
+                    </div>
                   </CardBody>
 
                   <CardFooter>

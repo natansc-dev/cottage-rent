@@ -76,10 +76,19 @@ export const CardBody = styled('div', {
   flexDirection: 'column',
   gap: '1rem',
 
+  span: {
+    fontSize: '0.975rem',
+    color: '#343D48'
+  },
+
   time: {
     display: 'flex',
     alignItems: 'center',
     gap: '0.6rem',
+
+    svg: {
+      color: '$secundary'
+    }
   }
 })
 
