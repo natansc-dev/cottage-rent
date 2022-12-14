@@ -19,6 +19,7 @@ type PreRegisterFormInputs = z.infer<typeof formSchema>
 
 export function Hero() {
   const {
+    reset,
     register,
     handleSubmit,
     formState: { isSubmitting },
@@ -46,6 +47,8 @@ export function Hero() {
         progress: undefined,
         theme: "light",
       });
+
+      reset()
     } catch (error) {
       toast.error('Ops...Sua solitação deu erro! Tente novamente.', {
         position: "top-center",
