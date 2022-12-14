@@ -1,7 +1,8 @@
 import { styled } from "../../styles";
 
 export const SectionGallery = styled('section', {
-  padding: '2rem 0 4rem 0'
+  padding: '2rem 0 4rem 0',
+  backgroundColor: '#f3f3f3',
 })
 
 export const ContainerGallery = styled('div', {

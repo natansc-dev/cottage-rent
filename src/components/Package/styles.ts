@@ -1,30 +1,7 @@
 import { styled } from "../../styles";
 
-export const ContainerPackage = styled('footer', {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  padding: '4rem 1.8rem 4rem 1.8rem',
-  margin: '2rem auto',
-  borderTop: '1px solid #E5ECF4',
-
-  img: {
-    width: 192,
-    height: 'auto',
-  },
-
-  p: {
-    margin: '1rem 0',
-  },
-
-  variants: {
-    media: {
-      lg: {
-        maxWidth: 970,
-      }
-    }
-  }
+export const ContainerPackage = styled('section', {
+  padding: '2rem 0 4rem 0',
 })
 
 export const HeadingPackage = styled('div', {
@@ -57,6 +34,11 @@ export const CarrosselPackage = styled('div', {
   marginTop: '48px',
   maxWidth: '100%',
 
+  '.swiper-slide': {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+
   '.swiper-pagination-bullets': {
     bottom: 20,
   },
@@ -82,4 +64,55 @@ export const CardPackage = styled('div', {
   padding: 38,
   border: '1px solid rgba(38, 78, 118, 0.1)',
   borderRadius: 6
+})
+
+export const CardHeader = styled('h2', {
+  fontSize: '1.6rem',
+  marginBottom: 38,
+})
+
+export const CardBody = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+
+  time: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.6rem',
+  }
+})
+
+export const CardFooter = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginTop: 38,
+})
+
+export const CardButton = styled('button', {
+  textAlign: 'center',
+  paddingLeft: '15px',
+  paddingRight: '15px',
+  paddingTop: '10px',
+  paddingBottom: '10px',
+  color: 'white',
+  backgroundColor: '$primary',
+  border: '0',
+  borderRadius: 6,
+  fontSize: '1rem',
+  padding: '12px 20px',
+  cursor: 'pointer',
+  lineHeight: 1.2,
+  transition: 'all 0.25s',
+  fontWeight: '500',
+
+  '&:disabled': {
+    opacity: 0.6,
+    cursor: 'not-allowed'
+  },
+
+  '&:not(:disabled):hover': {
+    backgroundColor: '$secundary',
+  }
 })

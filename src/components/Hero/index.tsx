@@ -28,7 +28,7 @@ export function Hero() {
   async function handlePreRegister(data: PreRegisterFormInputs) {
     const { name, phone, start_at, end_at } = data
     try {
-      const response = await api.post('interests', {
+      await api.post('interests', {
         name,
         phone,
         start_at,

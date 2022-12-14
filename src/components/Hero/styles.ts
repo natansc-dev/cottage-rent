@@ -90,14 +90,14 @@ export const FormHero = styled('form', {
 
   button: {
     border: 0,
-    borderRadius: '6px',
+    borderRadius: 6,
     cursor: 'pointer',
     width: '100%',
     height: 58,
     marginTop: '1.4rem',
     backgroundColor: "$primary",
     color: 'white',
-    fontWeight: '700',
+    fontWeight: 700,
     fontSize: '1.2rem',
 
     '&:disabled': {
