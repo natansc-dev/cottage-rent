@@ -1,6 +1,6 @@
 import { ContainerCarousel, SectionCarousel, GridCarousel, DescritionCarousel, FeaturesCarousel, GridRightContent, GridLeftContent, ImageContent } from "./styles";
 
-import { Toilet, WifiHigh, Drop } from 'phosphor-react'
+import { Toilet, WifiHigh, Drop, Balloon, Shower, Fire } from 'phosphor-react'
 
 import Image from "next/image";
 
@@ -39,19 +39,30 @@ export function Carousel() {
               <div>
                 <WifiHigh size={48} />
                 <h3>Wifi</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
               </div>
 
               <div>
                 <Drop size={48} />
                 <h3>Piscina</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
               </div>
 
               <div>
                 <Toilet size={48} />
-                <h3>4 Banheiros</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <h3>Banheiros</h3>
+              </div>
+              <div>
+                <Shower size={48} />
+                <h3>Suítes</h3>
+              </div>
+
+              <div>
+                <Balloon size={48} />
+                <h3>Salão</h3>
+              </div>
+
+              <div>
+                <Fire size={48} />
+                <h3>Churrasqueira</h3>
               </div>
             </FeaturesCarousel>
           </GridLeftContent>
