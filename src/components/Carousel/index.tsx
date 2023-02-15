@@ -37,31 +37,31 @@ export function Carousel() {
 
             <FeaturesCarousel media={{ '@md': 'md' }}>
               <div>
-                <WifiHigh size={48} />
+                <WifiHigh size={32} />
                 <h3>Wifi</h3>
               </div>
 
               <div>
-                <Drop size={48} />
+                <Drop size={32} />
                 <h3>Piscina</h3>
               </div>
 
               <div>
-                <Toilet size={48} />
+                <Toilet size={32} />
                 <h3>Banheiros</h3>
               </div>
               <div>
-                <Shower size={48} />
+                <Shower size={32} />
                 <h3>Suítes</h3>
               </div>
 
               <div>
-                <Balloon size={48} />
+                <Balloon size={32} />
                 <h3>Salão</h3>
               </div>
 
               <div>
-                <Fire size={48} />
+                <Fire size={32} />
                 <h3>Churrasqueira</h3>
               </div>
             </FeaturesCarousel>

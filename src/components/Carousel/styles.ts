@@ -46,7 +46,7 @@ export const GridLeftContent = styled('div', {
 export const DescritionCarousel = styled('div', {
   minWidth: 0,
   maxWidth: '490px',
-  margin: '0 auto 4rem',
+  margin: '0 auto 0.875rem',
   textAlign: 'center',
 
   h2: {
@@ -60,7 +60,7 @@ export const DescritionCarousel = styled('div', {
     color: "#343D48",
     fontSize: '1rem',
     lineHeight: 2.06,
-    marginBottom: '1rem',
+    marginBottom: '0.875rem',
   },
 
   variants: {
@@ -84,10 +84,15 @@ export const DescritionCarousel = styled('div', {
 export const FeaturesCarousel = styled('div', {
   margin: 0,
   minWidth: 0,
-  gap: '2.6rem 1.4rem',
+  gap: '1.6rem 1.4rem',
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
-
+  div: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'start',
+    gap: '8px',
+  },
   variants: {
     media: {
       md: {
