@@ -55,8 +55,13 @@ export function Hero() {
 
       const whatsAppButton = document.getElementById("whatsapp") as HTMLAnchorElement
 
-      const messageWhatsApp = `https://wa.me/5519997193094?text=Oi, me chamo ${name}, tudo bom?%0A interessado em reserva na seguinte data: ${format(new Date(start_at), 'dd/MM/yyyy')} - ${format(new Date(end_at), 'dd/MM/yyyy')}%0A%0APoderia me dar mais informações.`
-      whatsAppButton.href = messageWhatsApp
+      const messageWhatsApp = `https://wa.me/5519997193094?text=Oi, me chamo ${name}, tudo bom?%0A interessado em reserva na seguinte data: ${format(
+        addHours(new Date(start_at), 3),
+        'dd/MM/yyyy',
+      )} - ${format(
+        addHours(new Date(end_at), 3),
+        'dd/MM/yyyy',
+      )}%0A%0APoderia me dar mais informações.`
 
       whatsAppButton.click()
     } catch (error) {
