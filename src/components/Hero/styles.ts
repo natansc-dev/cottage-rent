@@ -1,6 +1,22 @@
-import { styled } from "../../styles";
+import { styled } from "../../styles"
 
 
+export const WhatsAppButton = styled('a', {
+  backgroundColor: '#25d366',
+  width: '60px',
+  height: '60px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'fixed',
+  bottom: '2rem',
+  right: '2rem',
+  cursor: 'pointer',
+  borderRadius: '50%',
+  userSelect: 'none',
+  boxShadow: '0px 4px 10px 0px rgb(0 0 0 / 15 %)',
+  zIndex: 9998,
+})
 export const SectionHero = styled('section', {
   backgroundSize: 'cover',
   backgroundColor: '#f3f3f3',
